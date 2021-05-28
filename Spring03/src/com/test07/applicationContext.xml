@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="samsong" class="com.test07.SamsongTV" lazy-init="true" /> <!-- 호출하기 전까지 객체 생성이 안됨 -->
+	
+	<bean id="lz" class="com.test07.LzTV" />
+ 
+</beans>

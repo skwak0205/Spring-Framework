@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- factory-method가 있는 이유  -->
+	<!-- AbstractTest singleton = new AbstractTest() 이여야 하지만 abstract 클래스는 new를 사용하여 객체 생성을 못하기 때문에-->
+	<!-- AbstractTest singleton = AbstractTest.getInstance(); -->
+	<bean id="signleton" class="com.test01.AbstractTest" factory-method="getInstance" />
+</beans>

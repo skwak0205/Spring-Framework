@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 이순신 2500000 java팀 (Developer) -->
+	<bean id="lee" class="com.test03.Developer">
+		<constructor-arg name="name" value="이순신" />
+		<constructor-arg name="salary" value="2500000" />
+		<property name="dept" value="java팀" />
+	</bean>
+	
+	
+	<!-- 홍길동 2000000 docker팀 (Engineer) -->
+	<bean id="hong" class="com.test03.Engineer">
+		<constructor-arg name="name" value="홍길동" /> <!-- name의 name은 생성자의 파라미터 name을 찾음 -->
+		<constructor-arg name="salary" value="2000000" />
+		<property name="dept" value="docker팀" />
+	</bean>
+</beans>

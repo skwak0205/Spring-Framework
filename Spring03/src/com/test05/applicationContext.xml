@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- c: constructor - 생성자에 값 주입 할 때 사용 -->
+	<bean id="lee" class="com.test05.Emp" c:name="이순신" c:salary="3000000" />
+	<bean id="leess" class="com.test05.Developer" c:emp-ref="lee" c:dept="java 1팀" />
+
+	<!-- p: property - setter에 값 주입 할 때 사용 -->
+	<bean id="hong" class="com.test05.Emp" p:name="홍길동" p:salary="2500000" />
+	<bean id="honggd" class="com.test05.Engineer" p:emp-ref="hong" p:dept="docer 1팀" />
+</beans>
