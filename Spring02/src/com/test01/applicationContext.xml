@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="null" class="com.test01.MessageBeanImpl"></bean>
+	<!-- bean - 객체(class) / MessageBeanImpl null = MessageBeanImpl(); -->
+	
+	<bean id="apple" class="com.test01.MessageBeanImpl">
+		<constructor-arg>
+			<value>apple</value>
+		</constructor-arg>
+		
+		<constructor-arg>
+			<value>10000</value>
+		</constructor-arg>
+	</bean>
+	<!-- MessageBeanImpl apple = new MessageBeanImpl("apple", 10000); -->
+	<!-- Dependency Injection(의존주입) 한 것 -->
+	
+	<bean id="mango" class="com.test01.MessageBeanImpl">
+		<constructor-arg value="mango" />
+		<constructor-arg value="15000" />
+	</bean>
+	<!-- MessageBeanImpl mango = new MessageBeanImpl("mango", 15000); -->
+	
+	<bean id="banana" class="com.test01.MessageBeanImpl">
+		<constructor-arg index="1" value="20000" />
+		<constructor-arg index="0" value="바나나" />
+	</bean>
+	
+</beans>
