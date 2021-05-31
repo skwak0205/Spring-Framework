@@ -80,7 +80,7 @@
 - 스프링은 어노테이션을 이용하여 빈과 관련된 정보를 설정
 - 설정
   1. CommonAnnotationBeanPostProcessor 클래스를 설정 파일에 bean 객체로 등록하여 annotation 적용
-  2. CommonAnnotationBeanPostProcessor 클래스를 설정 파일에 bean 객체로 등록하여 annotation 적용
+  2. <context:annotation-config /> 태그를 이용
   3. <context:component-scan base-package="" /> 태그를 이용
   4. <mvc:annotation-driven /> 태그를 이용
 
