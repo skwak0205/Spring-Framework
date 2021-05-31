@@ -1,7 +1,5 @@
 # Spring Framework
 
-------
-
 ### Framework이란
 
 - 프로그램의 골격이 되는 기본 코드
@@ -76,3 +74,33 @@
 
      7. Weaving
         - 일련의 과정
+
+### Spring Annotation
+
+- 스프링은 어노테이션을 이용하여 빈과 관련된 정보를 설정
+- 설정
+  1. CommonAnnotationBeanPostProcessor 클래스를 설정 파일에 bean 객체로 등록하여 annotation 적용
+  2. CommonAnnotationBeanPostProcessor 클래스를 설정 파일에 bean 객체로 등록하여 annotation 적용
+  3. <context:component-scan base-package="" /> 태그를 이용
+  4. <mvc:annotation-driven /> 태그를 이용
+
+### Spring MVC
+
+- 스프링이 제공하는 트랜잭션 처리가 DI 및 AOP 적용 등을 쉽게 사용할 수 있도록 도움
+- 컨트롤러, command 객체, 모델 객체, Validator 등의 각각의 역할에 대한 명확한 분리
+- 주요 구성 요소
+  1. DispatcherServlet
+     - 클라이언트의 요청을 전달 받음
+     - 컨트롤러에게 클라이언트의 요청을 전달하고 컨트롤러가 리턴한 결과값을 View에 전달하여 알맞은 응답을 생성
+  2. HandlerMapping
+     - 클라이언트의 요청 URL을 어떤 컨트롤러가 처리할지 결정
+     - RequestURL과 Controller 클래스의 맵핑을 관리
+  3. Controller
+     - 클라이언트의 요청을 처리한 뒤, 그 결과를 DispatcherServlet에 알려줌
+     - 비즈니스 로직을 호출하여 처리 결과 ModelAndView 인스턴스를 반환
+     - annotation 사용 예제
+  4. ModelAndView
+     - 컨트롤러가 처리한 결과 정보 및 뷰 선택에 필요한 정보를 담음
+  5. ViewResolver
+     - 컨트롤러의 처리결과를 생성할 뷰를 결정
+
